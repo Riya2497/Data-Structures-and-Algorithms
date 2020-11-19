@@ -55,13 +55,10 @@ int height(struct Node* root)
     
     int l=height(root->left);
     int r=height(root->right);
+	ans = (l>r) ? l:r;
     printf("%d  %d\n", root->val, ans);
     
-    if(l>r)
-        ans=l+1;
-    else 
-        ans=r+1;
-    
+    ans = ans+1;
     return ans;
 }
 
